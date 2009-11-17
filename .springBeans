@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.2.4.RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/main/resources/job-execution-context.xml</config>
+		<config>src/main/resources/simple-job-launcher-context.xml</config>
+		<config>src/test/resources/org/springframework/sample/lead/JobTests-context.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
