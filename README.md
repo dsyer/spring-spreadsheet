@@ -12,7 +12,7 @@ You can also clone the project with [Git](http://git-scm.com) by running:
 
     $ git clone git://github.com/dsyer/spring-spreadsheet
 
-Getting started: [here](docs/getting-started.html)
+Getting started: [here](docs/getting-started.md)
 
 ## Contact
 
