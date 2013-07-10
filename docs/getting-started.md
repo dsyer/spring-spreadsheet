@@ -8,7 +8,7 @@ layout: default
 Include dependency:
 
 `pom.xml`
-{% highlight xml %}
+{% highlight text %}
     <dependency>
         <groupId>org.springframework.spreadsheet</groupId>
         <artifactId>spring-spreadsheet</artifactId>
