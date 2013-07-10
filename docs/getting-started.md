@@ -4,10 +4,10 @@ Include dependency:
 
 `pom.xml`
 ```xml
-    <dependency>
-        <groupId></groupId>
-        <artifactId></artifactId>
-        <version></version>
-    </dependency>
+<dependency>
+    <groupId>org.springframework.spreadsheet</groupId>
+    <artifactId>spring-spreadsheet</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
 ```
     
