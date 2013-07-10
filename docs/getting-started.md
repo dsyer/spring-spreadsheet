@@ -3,7 +3,7 @@
 Include dependency:
 
 `pom.xml`
-```xml
+```
 <dependency>
     <groupId>org.springframework.spreadsheet</groupId>
     <artifactId>spring-spreadsheet</artifactId>
