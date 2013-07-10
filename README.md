@@ -16,4 +16,4 @@ Getting started: [here](docs/getting-started.md)
 
 ## Contact
 
-Dave Syer (david_syer@hotmail.com)...
+Dave Syer (david_syer@hotmail.com)

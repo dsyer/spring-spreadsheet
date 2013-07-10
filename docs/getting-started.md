@@ -2,8 +2,7 @@
 title: Spring Spreadsheet
 layout: default
 ---
-
-
+    
 # Getting Started with Spring Spreadsheet
 
 Include dependency:
