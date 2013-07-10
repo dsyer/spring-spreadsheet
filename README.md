@@ -1,4 +1,4 @@
-# [Spring Spreadsheet](https://github.com/dsyer/spring-spreadsheet) by [dsyer](https://github.com/dsyer">dsyer)
+# [Spring Spreadsheet](https://github.com/dsyer/spring-spreadsheet) by [dsyer](https://github.com/dsyer)
 
 Spring spreadsheet support (Excel, OpenOffice etc.)
 
@@ -11,7 +11,8 @@ You can download this project in either
 You can also clone the project with [Git](http://git-scm.com) by running:
 
     $ git clone git://github.com/dsyer/spring-spreadsheet
-    
+
+Getting started: [here](docs/getting-started.md)
 
 ## Contact
 
