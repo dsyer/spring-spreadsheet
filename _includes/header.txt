@@ -1,5 +1,5 @@
 ---
-title: Spring Spreadsheet
+title: Docs
 layout: default
 ---
     
