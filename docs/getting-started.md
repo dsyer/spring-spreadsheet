@@ -1,6 +1,6 @@
 # Getting Started with Spring Spreadsheet
 
-Include dependency:
+Include dependency in your maven project:
 
 `pom.xml`
 ```
