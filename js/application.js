@@ -12,24 +12,10 @@ $(function(){
     return this;
   };
 
-
-  //OPENS ITEM DROPDOWN WIDGET
-  $(".js-item--open-dropdown").click(function () {
-    var dropdownItem = $(this).parents(".js-item-dropdown--wrapper");
-    var documentHeight = $(document).height();
-    var headerHeight = $("header").outerHeight();
-    var footerHeight = $("footer").outerHeight();
-    var scrimHeight = documentHeight - headerHeight - footerHeight;
-
-    dropdownItem.toggleClass("js-open");
-    dropdownItem.siblings().removeClass("js-open");
-    $(this).parents(".js-item-dropdown-widget--wrapper").siblings().find(".js-item-dropdown--wrapper").removeClass("js-open");
-
-    $("#scrim").addClass("js-show").css("height", scrimHeight).css("top", headerHeight);
-    $("#scrim").click(function() {
-      $(".js-item-dropdown--wrapper").removeClass("js-open");
-      $(this).removeClass("js-show");
-    });
+  $("#scrim").click(function() {
+    $(".js-item-dropdown--wrapper").removeClass("js-open");
+    $(".js-item--open-dropdown").removeClass("js-show");
+    $("#scrim").removeClass("js-show");
   });
 
   //OPENS SEARCH DROPDOWN
@@ -48,7 +34,6 @@ $(function(){
     $(".body--container, .js-search-input-close").click(function() {
       inputContainer.removeClass("js-show");
       $(".nav-search").removeClass("js-highlight");
-      $("#scrim").removeClass("js-show");
     });
   });
 
@@ -85,17 +70,22 @@ $(function(){
 
   var moveItemSlider = function () {
     var activeItem = $(".js-item-slider--wrapper .js-item.js-active");
-    var activeItemPosition = activeItem.position();
-    var activeItemOffset = activeItemPosition.left;
-    var activeItemWidth = activeItem.outerWidth();
-    
-    var slider = $(".js-item--slider");
-    var sliderPosition = slider.position();
-    var sliderOffset = sliderPosition.left;
-    var sliderTarget = activeItemOffset - sliderOffset;
+    if (activeItem.length == 0 ) {
+      return;
+    } else {
+      var activeItemPosition = activeItem.position();
+      var activeItemOffset = activeItemPosition.left;
+      var activeItemWidth = activeItem.outerWidth();
 
-    slider.width(activeItemWidth);
-    slider.css("margin-left", sliderTarget);
+      var slider = $(".js-item--slider");
+      var sliderPosition = slider.position();
+      var sliderOffset = sliderPosition.left;
+      var sliderTarget = activeItemOffset - sliderOffset;
+
+      slider.width(activeItemWidth);
+      slider.css("margin-left", sliderTarget);
+      
+    };
   }
 
   moveItemSlider();
@@ -105,9 +95,9 @@ $(function(){
     $(this).siblings().removeClass("js-active");
     moveItemSlider();
   });
+
+  new Spring.ProjectDocumentationWidget();
 });
-
-
 
 
 var detectOs = function() {

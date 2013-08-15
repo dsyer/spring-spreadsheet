@@ -1,0 +1,52 @@
+<script type="text/html" id="project-documentation-widget-template">
+    <div class="right-pane-widget--container no-top-border project-documentation--container">
+        <div class="item-dropdown-widget">
+            <div class="item-dropdown--title"><%= name %></div>
+            <div class="item--dropdown">
+                <div class="item--body">
+                    <div class="item--body-title">
+                        <div class="item--left-column">Release</div>
+                        <div class="item--right-column">Documentation</div>
+                    </div>
+                    <% _.each(releases, function(release) { %>
+                    <div class="item--body--version">
+                        <div class="item--left-column">
+                            <p><%= release.fullName %></p>
+                            <div class="spring-icon <%= release.statusIconClass() %>"></div>
+                        </div>
+                        <div class="item--right-column">
+                            <a href='<%= release.refDocUrl %>' class="docs-link reference-link">Reference</a>
+                            <a href='<%= release.apiDocUrl %>' class="docs-link api-link">API</a>
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="project-quickstart-selector-template">
+    <select class='selector selectpicker'>
+        <% _.each(releases, function(release, index) { %>
+            <option value="<%= index %>" data-content="<span><%= release.shortName %></span><div class='spring-icon <%= release.statusIconClass() %>'/>"> ()</option>
+        <% }); %>
+    </select>
+</script>
+
+<script type="text/html" id="project-quickstart-maven-widget-dependency-template">&lt;dependency&gt;
+    &lt;groupId&gt;<%= groupId %>&lt;/groupId&gt;
+    &lt;artifactId&gt;<%= artifactId %>&lt;/artifactId&gt;
+    &lt;version&gt;<%= fullName %>&lt;/version&gt;
+&lt;/dependency&gt;
+</script>
+<script type="text/html" id="project-quickstart-maven-widget-repository-template">
+&lt;repository&gt;
+    &lt;id&gt;<%= id %>&lt;/id&gt;
+    &lt;name&gt;<%= name %>&lt;/name&gt;
+    &lt;url&gt;<%= url %>&lt;/url&gt;
+    &lt;snapshots&gt;
+        &lt;enabled&gt;<%= snapshotsEnabled %>&lt;/enabled&gt;
+    &lt;/snapshots&gt;
+&lt;/repository&gt;
+</script>
